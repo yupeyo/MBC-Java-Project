@@ -2,8 +2,9 @@ package quiz;
 
 import java.util.Scanner;
 
-public class CalculatorEx1 {
+public class CalculatorEx1 {  // 클래스
    
+   // 필드(멤버변수)
    static Scanner scan = new Scanner(System.in);
 
    public static void main(String[] args) {
@@ -21,25 +22,42 @@ public class CalculatorEx1 {
          // 입력값 받기...
          // Scanner 객체 생성
          
-         String selectMenu = scan.next();
+         String selectMenu = scan.next();  // 문자열... 
          
+         int num1, num2;
          // 메뉴 선택에 따른 동작 구현
          switch (selectMenu) {
             case "1": 
                System.out.println("더하기 계산을 합니다.");
-               plus();
+               System.out.print("첫번째 정수 입력 : ");
+               num1 = scan.nextInt();
+               System.out.print("두번째 정수 입력 : ");
+               num2 = scan.nextInt();
+               System.out.println("더하기 결과 : "+ plus(num1, num2));  
                break;
             case "2":
                System.out.println("빼기 계산을 합니다.");
-               min();
+               System.out.print("첫번째 정수 입력 : ");
+               num1 = scan.nextInt();
+               System.out.print("두번째 정수 입력 : ");
+               num2 = scan.nextInt();
+               System.out.println("빼기 결과 : "+minus(num1, num2));
                break;
             case "3":
                System.out.println("곱하기 계산을 합니다.");
-               mul();
+               System.out.print("첫번째 정수 입력 : ");
+               num1 = scan.nextInt();
+               System.out.print("두번째 정수 입력 : ");
+               num2 = scan.nextInt();
+               System.out.println("곱하기 결과 : "+multiplication(num1, num2));
                break;
             case "4":
                System.out.println("나누기 계산을 합니다.");
-               div();
+               System.out.print("첫번째 정수 입력 : ");
+               num1 = scan.nextInt();
+               System.out.print("두번째 정수 입력 : ");
+               num2 = scan.nextInt();
+               System.out.println("나누기 결과 : "+division(num1, num2));
                break;
             case "0":
                System.out.println("종료 합니다.");
@@ -53,37 +71,28 @@ public class CalculatorEx1 {
    } // main() 끝
    
    // 더하기 메서드.. .
-   public static void plus() {
-	   
+   public static int plus(int num1, int num2) {
+//      System.out.println("더하기 결과 : "+ (num1 + num2));
+      return (num1 + num2);
+   }
    
-      
-      System.out.print("첫번째 정수 입력 : ");
-      int num1 = scan.nextInt();
-      System.out.print("두번째 정수 입력 : ");
-      int num2 = scan.nextInt();
-      System.out.println("더하기 결과 : "+ (num1 + num2));
-   }  
-   public static void min() {   
-      System.out.print("첫번째 정수 입력 : ");
-      int num1 = scan.nextInt();
-      System.out.print("두번째 정수 입력 : ");
-      int num2 = scan.nextInt();
-      System.out.println("더하기 결과 : "+ (num1 - num2));
-   } 
-   public static void mul() {   
-      System.out.print("첫번째 정수 입력 : ");
-      int num1 = scan.nextInt();
-      System.out.print("두번째 정수 입력 : ");
-      int num2 = scan.nextInt();
-      System.out.println("더하기 결과 : "+ (num1 * num2));  
+   // 빼기 메서드
+   public static int minus(int num1, int num2) {
+      return (num1 - num2);
    }
-   public static void div() {   
-          System.out.print("첫번째 정수 입력 : ");
-      int num1 = scan.nextInt();
-      System.out.print("두번째 정수 입력 : ");
-      int num2 = scan.nextInt();
-      System.out.println("더하기 결과 : "+ (num1 / num2));
+   
+   public static int multiplication(int num1, int num2) {
+      return (num1 * num2);
+   }
+   
+   public static double division(int num1, int num2) {
+      if (num2 == 0) {
+         System.out.println("0으로 나눌 수 없습니다.");
+         return 0.0;   // 원래는 예외처리해야 하지만... 
+      }
+      return (int)((num1 / (double)num2) * 100)/(double)100;
       
    }
+   
 
 }
