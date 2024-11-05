@@ -1,22 +1,50 @@
 package quiz;
 
-// 2024.10.23 출력 문제
+//  2024.10.23 출력 문제
 
 public class Quiz1 {
 
 	public static void main(String[] args) {
-		// 문제 1, 2 출력, 3번 출력 문제...
+		// 문제 1, 2 출력, 3번 출력 문제... 
+		// 문제 1. 토끼
+		System.out.println("--------- 1번 -----------");
+		System.out.println("===================");
+		System.out.println("      /)/)");     
+		System.out.println("     (  ..)");
+		System.out.println("     (   >♡");
+		System.out.println(" Have a Good Time.");
+		System.out.println("===================");
 		
-	System.out.println("\t\t 1번");
-	System.out.println(" \n ===================\n        /)/)\n       (  ..)\n       (  >♡ \n  Have a Good Time. \n ===================");
-	System.out.println("\t\t 2번");
-	System.out.println("\n                  #### 회비 정보 ####\n==================================================\n 이름           나이      전화번호            회비\n==================================================\n홍길동          \"15\"      010-123-1234     ￦20,000\n임꺽정          \"20\"      010-234-2345     ￦30,000\n김말이          \"20\"      010-345-3456     ￦50,000\n---------------------------------------------------\n총합계                                     ￦100,000\n==================================================");
-	System.out.println("\t\t 3번");
-	System.out.println("-.제어문자를 이용하여 출력하도록 작성\n========== 출력 결과 ==========\n이름 :홍길동\n나이 :20\nTel :010-1234-1234\n키 :178.5\n몸무게 :75\n혈액형 :O");
-
-	String banner = "======== 출력결과 ========";
-	String name = "홍길동";
-	
+		System.out.println("--------- 2번 -----------");
+		// 문제 2. 회원 정보-머니 테이블
+		System.out.println();
+		System.out.println("\t #### 회비 정보 ####");
+		System.out.println("=========================================");
+		System.out.println("이름\t나이\t전화번호\t\t회비");
+		System.out.println("=========================================");
+		System.out.println("홍길동\t\"15\"\t010-123-1234\t\u20A920,000");  // \u20A9 =>원화
+		System.out.println("임꺽정\t\"20\"\t010-234-2345\t\u20A930,000");
+		System.out.println("김말이\t\"28\"\t010-345-3456\t\u20A950,000");
+		System.out.println("-----------------------------------------");
+		System.out.println("총합계\t\t\t\t\u20A9100,000");
+		System.out.println("=========================================");
+		
+		System.out.println("--------- 3번 -----------");
+		// 변수 사용해서 출력
+		String banner = "========= 출력 결과 ========";
+		String name = "홍길동";
+		int age = 20;
+		String tel = "010-1234-1234";
+		double height = 178.5;
+		double weight = 75;
+		String bloodType = "O";
+		System.out.println(banner);
+		System.out.println("이름\t:" + name);
+		System.out.println("나이\t:" + age);
+		System.out.println("Tel\t:" + tel);
+		System.out.println("키\t:" + height);
+		System.out.println("몸무게\t:" + weight);
+		System.out.println("혈액형\t:" + bloodType);
 	}
 
 }

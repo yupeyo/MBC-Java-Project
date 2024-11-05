@@ -1,12 +1,21 @@
-package program.obj;
+package ch6.obj;
 
-public class Customer {
+public class Customer{
    
    // 멤버변수(필드)
    String name;
    String gender;
    String email;
    int birthYear;
+   
+   public Customer() {}
+   
+   public Customer(String name, String gender, String email, int birthYear) {
+	   this.name = name;
+	   this.gender = 
+	   this.email =
+	   this.birthYear =
+   }
    
    // 생성자
    // 생략(기본 생성자 -> Customer() {}; )

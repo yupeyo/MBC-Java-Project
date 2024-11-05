@@ -1,6 +1,6 @@
 package quiz;
 
-public class ArraysQuiz2 {
+public class ArrayQuiz2 {
 
 	public static void main(String[] args) {
 		// 다음 numArr의 값들의 총합과 평균을 구해서 출력해보세요.. 
