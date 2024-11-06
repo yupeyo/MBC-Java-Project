@@ -4,7 +4,28 @@ public class AbstractExample1 {
 
    
    public static void main(String[] args) {
-      // TODO Auto-generated method stub
+      // 추상 클래스 테스트... 
+      // 1. 추상 클래스는 인스턴스화 할 수 없다. 
+      // Shape shape = new Shape(0, 0);
+      // 만약에 자식이 아닌 클래스로 객체 생성시... 익명 클래스로 생성은 가능함. 
+//      Shape shape = new Shape() {  
+//         // 익명 클래스 - 클래스를 만들어서 사용하기는 애매하고, 현재만 사용할 객체를 만드는 경우...
+//         
+//         @Override
+//         public double getArea() {
+//            // TODO Auto-generated method stub
+//            return 0;
+//         }
+//      };
+      
+      Shape[] shapes = new Shape[2];
+      shapes[0] = new Circle(10);        // 자식 객체 생성 후 대입
+      shapes[1] = new Rectangle(5, 10);
+      
+      
+      for (Shape s: shapes) {
+         System.out.println("도형의 넓이 : " + s.getArea());
+      }
 
    }
 
@@ -92,6 +113,7 @@ class Rectangle extends Shape {
       return (height * width);
    }
 }
+
 
 
 
