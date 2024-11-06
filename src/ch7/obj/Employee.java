@@ -15,10 +15,9 @@ public class Employee extends Person {
 		//  : 부모 생성자에 접근
 		this.department = department;
 	}
+	
 	public void working() {
-		System.out.println(name+ "이 일을 합니다.");
-		
-		
+		System.out.println(name +"이 일을 합니다.");
 	}
 	
 	@Override

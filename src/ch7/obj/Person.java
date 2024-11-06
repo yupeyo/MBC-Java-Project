@@ -16,7 +16,6 @@ public class Person {
 	public Person(String name, int age) {
 		this.name = name;  // this 객체 그 자신을 나타냄... 
 		this.age = age;
-		
 	}
 	
 	public Person(String name) {
